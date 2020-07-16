@@ -31,9 +31,10 @@ $router->add(
 $router->handle(
     $_SERVER["REQUEST_URI"]
 );
-````
+```
 
 ## Constants
+
 There are two constants available for the [Phalcon\Mvc\Router][mvc-router] component that are used to define the position of the route in the processing stack.
 
 - `POSITION_FIRST`
@@ -46,6 +47,7 @@ public function __construct(
     bool $defaultRoutes = true
 )
 ```
+
 Phalcon\Mvc\Router constructor
 
 ```php
@@ -56,6 +58,7 @@ public function add(
     mixed $position = Router::POSITION_LAST
 ): RouteInterface
 ```
+
  Adds a route to the router without any HTTP constraint
 
 ```php
@@ -173,9 +176,10 @@ public function attach(
     mixed $position = Router::POSITION_LAST
 ): RouterInterface
 ```
+
  Attach Route object to the routes stack.
 
- ```php
+```php
 use Phalcon\Mvc\Router;
 use Phalcon\Mvc\Router\Route;
 
@@ -372,8 +376,7 @@ $router->add(
 $router->handle(
     $_SERVER["REQUEST_URI"]
 );
-````
-
+```
 
 The first parameter of the `add()` method is the pattern you want to match and, optionally, the second parameter is a set of paths. In the above example, for the URI `/admin/invoices/list`, the `InvoicesController` will be loaded and the `listAction` will be called. It is important to remember that the router does not execute the controller and action, it only collects this information and then forwards it to the [Phalcon\Mvc\Dispatcher](dispatcher) which executes them.
 
